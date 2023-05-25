@@ -19,19 +19,19 @@ PostgreSQL, Docker. Возможно развернуть путем непос�
    директории, надо внести соответствующие правки в файл docker-compose на строке 34
 
 ```text
-/var/lib/postgresql/data
+/var/lib/postgresql/quizzes/
 ```
 
 3. Дать ей права на запись пользователю, под которым запускается Docker
 
 ```text
-sudo chown -R $USER:$USER /var/lib/postgresql/data/
+sudo chown -R $USER:$USER /var/lib/postgresql/quizzes/
 ```
 
 Пример:
 
 ```text
-sudo chown -R orlovnikita:orlovnikita /var/lib/postgresql/data/
+sudo chown -R orlovnikita:orlovnikita /var/lib/postgresql/quizzes/
 ```
 
 4. Открыть в терминале папку quizzes_jservice, содержащую текущий проект и выполнить две последовательные команды.

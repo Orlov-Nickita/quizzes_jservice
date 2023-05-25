@@ -31,12 +31,12 @@ services:
     volumes:
       - ./generate_bd.sql:/docker-entrypoint-initdb.d/create_tables.sql
       - ./db_settings.sh:/docker-entrypoint-initdb.d/init-user-db.sh
-      - db_data:/var/lib/postgresql/data
+      - db_data:/var/lib/postgresql/quizzes/
 
 volumes:
   db_data:
     driver: local
     driver_opts:
-      device: /var/lib/postgresql/data
+      device: /var/lib/postgresql/quizzes/
       type: none
       o: bind
